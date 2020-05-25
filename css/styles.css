@@ -1,0 +1,37 @@
+.container {
+    max-width: 400px;
+}
+
+.chat__window {
+    background-color: rgb(241, 241, 241);
+    padding: 1em 1em .5em;
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.chat__window p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.chat__window footer {
+    font-size: 12px;
+}
+
+.chat__room-buttons span {
+    font-weight: bold;
+    color: rgb(175, 175, 253);
+    padding-left: 3px;
+    /* position: relative;
+    top: -12px;
+    right: -7px; */
+}
+
+.chat__room-buttons span:active {
+    font-weight: bold;
+    color: yellow;
+    padding-left: 3px;
+    /* position: relative;
+    top: -12px;
+    right: -7px; */
+}
