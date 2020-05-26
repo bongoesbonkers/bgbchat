@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/styles.css">
     <title>bgb chat</title>
 </head>
@@ -14,28 +15,33 @@
 
     <div class="chat__section container">
         <div class="chat__heading my-3">
-            <h1 class="display-4 text-center">bgb chat</h1>
-            <small class="text-muted text-center d-block text-capitalize">A lightweight open chat application. Please do not reveal any private or personal information.</small>
+            <h1 class="display-1 text-center">b-chat</h1>
+            <small class="text-muted text-center d-block">A lightweight, anonymous and open chat application. Please <span class='text-uppercase text-warning font-weight-bold'>do not</span> reveal any private or personal information.</small>
         </div>
 
-        <div class="chat__room-buttons text-center my-3">
+        <div class="chat__room-buttons my-3">
             <button class="chat__room-button btn btn-primary m-1 active" id="general">
-                @general
+                @ general
             </button>
-            <button class="chat__room-button btn btn-primary m-1" id="music">
-                @music
+            <button class="chat__room-button btn btn-primary m-1" id="social">
+                @ social
+            </button>
+            <button class="chat__room-button btn btn-primary m-1" id="news">
+                @ news
+            </button>
+            <button class="chat__room-button btn btn-primary m-1" id="events">
+                @ events
             </button>
             <button class="chat__room-button btn btn-primary m-1" id="gaming">
-                @gaming
+                @ gaming
             </button>
         </div>
-        <form class="add__chat-room my-2 text-center" autocomplete="off">
+        <!-- <form class="add__chat-room my-2 text-center" autocomplete="off">
             <div class="input-group">
-                <input type="text" name="room" id="room" class="form-control">
-                <button class="btn btn-info input-group-append">Create custom room</button>
-
+                <input type="text" name="room" id="room" class="form-control" required>
+                <button class="btn btn-info input-group-append text-capitalize">Create custom room</button>
             </div>
-        </form>
+        </form> -->
 
         <div class="chat__window my-3 text-right">
             <ul class="list-unstyled">
@@ -68,34 +74,34 @@
 
 
     <!-- FIREBASE -->
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-firestore.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-firestore.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyDCw9C7ywtVPeDCeveESEPPRcJCYxb0nHk",
-    authDomain: "bgb-chat-app-001.firebaseapp.com",
-    databaseURL: "https://bgb-chat-app-001.firebaseio.com",
-    projectId: "bgb-chat-app-001",
-    storageBucket: "bgb-chat-app-001.appspot.com",
-    messagingSenderId: "127641882185",
-    appId: "1:127641882185:web:de2788caa9b7875003f998"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  const db= firebase.firestore();
-</script>
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyDCw9C7ywtVPeDCeveESEPPRcJCYxb0nHk",
+        authDomain: "bgb-chat-app-001.firebaseapp.com",
+        databaseURL: "https://bgb-chat-app-001.firebaseio.com",
+        projectId: "bgb-chat-app-001",
+        storageBucket: "bgb-chat-app-001.appspot.com",
+        messagingSenderId: "127641882185",
+        appId: "1:127641882185:web:de2788caa9b7875003f998"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db= firebase.firestore();
+    </script>
 
-<script src='scripts/moment.js'></script>
-<script src='scripts/user.js'></script>
-<script src='scripts/chats.js'></script>
-<script src='scripts/chatUI.js'></script>
-<script src='scripts/app.js'></script>
+    <script src='scripts/moment.js'></script>
+    <script src='scripts/user.js'></script>
+    <script src='scripts/chats.js'></script>
+    <script src='scripts/chatUI.js'></script>
+    <script src='scripts/app.js'></script>
 
 </body>
 </html>

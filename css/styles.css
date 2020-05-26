@@ -1,11 +1,47 @@
+body {
+    font-family:  'Dosis', Helvetica, Lato, Montserrat, sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
 .container {
     max-width: 400px;
 }
 
+.chat__room-buttons span {
+    font-weight: bold;
+    color: yellow;
+    padding-left: 3px;
+    /* position: relative;
+    top: -12px;
+    right: -7px; */
+}
+
+.chat__room-buttons span:active {
+    font-weight: bold;
+    padding-left: 3px;
+}
+
+
+.chat__room-buttons button:focus:active {
+    box-shadow: unset;
+}
+
+.chat__room-buttons .active {
+    background-color: #001c39 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    border: tomato;
+}
+
+.chat__room-buttons .active:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    /* border: none; */
+}
+
 .chat__window {
-    background-color: rgb(241, 241, 241);
+    background-color: rgb(247, 234, 234);
     padding: 1em 1em .5em;
-    height: 200px;
+    height: 300px;
     overflow-y: scroll;
 }
 
@@ -18,40 +54,25 @@
     font-size: 12px;
 }
 
-.chat__room-buttons span {
-    font-weight: bold;
-    color: rgb(175, 175, 253);
-    padding-left: 3px;
-    /* position: relative;
-    top: -12px;
-    right: -7px; */
+.chat__window li {
+background-color: antiquewhite;
+padding: 10px 20px 5px;
+text-align: left;
+margin: 4px auto;
 }
 
-.chat__room-buttons span:active {
-    font-weight: bold;
-    color: yellow;
-    padding-left: 3px;
-    /* position: relative;
-    top: -12px;
-    right: -7px; */
+.unique {
+background-color: floralwhite !important;
+border-radius: 10px;
+text-align: right !important;
 }
 
-.chat__room-buttons button {
-    border: none !important;
+.btn-primary {
+    background-color: #005abb;
+    border-color: #005abb;
 }
 
-.chat__room-buttons button:focus:active {
-    box-shadow: unset;
-}
-
-.chat__room-buttons .active {
-    background-color: tomato !important;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-    border: none;
-}
-
-.chat__room-buttons .active:hover {
-    background-color: rgb(241, 73, 43) !important;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-    border: none;
+.btn-primary:hover {
+    background-color: #003f84;
+    border-color: #003f84;
 }

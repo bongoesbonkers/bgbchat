@@ -1,19 +1,17 @@
 // DOM queries
 const roomBtns = document.querySelector('.chat__room-buttons');
 
-//GET USER
+//Initiate a User Object
 let user = new User('anonymous');
-
 if(localStorage.getItem('username')) {
     user.username = localStorage.getItem('username');
 }
-
 user.displayUsername();
 
 //LOAD FIRST CHAT IN GENERAL ROOM
 let chat = new Chat(user, 'general'); 
 
-//generate ui object
+//generate UI object
 const ui = new ChatUI();
 
 //Listener for room buttons
