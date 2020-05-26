@@ -23,6 +23,57 @@ class Chat {
             })
     }
 
+    addRoom() {
+        newRoomForm.addEventListener('submit', async e=>{
+            e.preventDefault();
+            if(user.roomCount < 5) {
+                const value = newRoomForm.room.value.trim();
+                await this.roomsDB.doc('default').get()
+                    .then( async response => {
+                        let test = response.data().rooms.find((room)=>{
+                            return room === value;
+                        });
+                        if(test) {
+                            alert('Oops! That room already exists.')
+                        } else {
+                            this.room = newRoomForm.room.value;
+                            await this.roomsDB.doc('custom').update({
+                                rooms: firebase.firestore.FieldValue.arrayUnion(this.room)
+                            })
+                            document.querySelector('.chat__room-buttons').innerHTML += `
+                            <button class="chat__room-button btn btn-dark m-1" id="${this.room}" data-creator="${this.username}">
+                                @${this.room}
+                                <span class='delete'>x</span>
+                            </button>
+                            `;
+                            newRoomForm.reset();
+                        }
+                    })
+            } else {
+                console.log('max number of rooms reached. Please close an existing room');
+            }
+        })
+    }
+
+    deleteAndUpdateRooms() {
+        roomsContainer.addEventListener('click', async e=> {
+            //if delete room button is pressed
+            if(e.target.tagName === 'SPAN') {
+                //get room id
+                const id = e.target.parentElement.id;
+
+                //await update chat-rooms array
+                // if(test){
+                    await this.roomsDB.doc('custom').update({
+                        rooms: firebase.firestore.FieldValue.arrayRemove(id)
+                    })
+                    //remove the room in UI
+                    e.target.parentElement.remove();
+                // }
+            }
+        })
+    }
+
     async getChats(callback) {
         await this.chatsDB.orderBy("time").limit(50).get()
             .then(snapshot => {
