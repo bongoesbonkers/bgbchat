@@ -15,18 +15,17 @@ class ChatUI {
     }
 
     logChats(data) {
-
+        const time = moment(data.time.toDate());
+        const timeOutput = moment(time).fromNow();
         const html = `
         <li class="list-unstyled">
         <blockquote class="blockquote">
         <p>${data.message}</p>
-        <footer class="blockquote-footer">${data.username}</footer>
+        <footer class="blockquote-footer">${data.username}, ${timeOutput}</footer>
         </blockquote>
         </li>`
-
-
         chatWindow.innerHTML+= html;
-
+        chatWindow.scrollBy(0, chatWindow.scrollHeight);
     }
 
     clearChatWindow() {

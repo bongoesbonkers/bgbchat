@@ -1,0 +1,7 @@
+Chat buttons:-
+Added active class for chat.
+
+
+Chat window:-
+Messages now display the relative time from message sent. 
+

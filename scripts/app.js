@@ -21,7 +21,12 @@ roomsContainer.addEventListener('click', e=> {
 
     if(e.target.tagName === 'BUTTON') {
         chat.room = e.target.id;
-        console.log(chat.room);
+        roomBtns.querySelectorAll('button').forEach(button => {
+            button.classList.remove('active')
+        });
+        const timer = setTimeout(()=>{
+            e.target.classList.add('active');
+        },100);
         ui.clearChatWindow();
         chat.getChats(ui.logChats);
     }

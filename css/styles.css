@@ -35,3 +35,23 @@
     top: -12px;
     right: -7px; */
 }
+
+.chat__room-buttons button {
+    border: none !important;
+}
+
+.chat__room-buttons button:focus:active {
+    box-shadow: unset;
+}
+
+.chat__room-buttons .active {
+    background-color: tomato !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    border: none;
+}
+
+.chat__room-buttons .active:hover {
+    background-color: rgb(241, 73, 43) !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    border: none;
+}

@@ -68,7 +68,7 @@ class Chat {
     }
 
     async getChats(callback) {
-        await this.chatsDB.get()
+        await this.chatsDB.orderBy("time").limit(50).get()
             .then(snapshot => {
                 snapshot.docs.forEach(doc => {
                     if(this.room === doc.data().room){
@@ -102,10 +102,12 @@ class Chat {
         chatForm.addEventListener('submit', async e=> {
             e.preventDefault();
             // console.log(chat);
+            const time = new Date();
             const data = {
                 message: chatForm.chat__message.value,
                 username: User.username,
-                room: this.room
+                room: this.room,
+                time: firebase.firestore.Timestamp.fromDate(time)
             }
             await this.chatsDB.add(data)
                 .then(()=> chatForm.reset())

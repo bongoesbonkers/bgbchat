@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Document</title>
+    <title>bgb chat</title>
 </head>
 
 <body>
@@ -15,10 +15,11 @@
     <div class="chat__section container">
         <div class="chat__heading my-3">
             <h1 class="display-4 text-center">bgb chat</h1>
+            <small class="text-muted text-center d-block text-capitalize">A lightweight open chat application. Please do not reveal any private or personal information.</small>
         </div>
 
         <div class="chat__room-buttons text-center my-3">
-            <button class="chat__room-button btn btn-primary m-1" id="general">
+            <button class="chat__room-button btn btn-primary m-1 active" id="general">
                 @general
             </button>
             <button class="chat__room-button btn btn-primary m-1" id="music">
@@ -90,6 +91,7 @@
   const db= firebase.firestore();
 </script>
 
+<script src='scripts/moment.js'></script>
 <script src='scripts/user.js'></script>
 <script src='scripts/chats.js'></script>
 <script src='scripts/chatUI.js'></script>
