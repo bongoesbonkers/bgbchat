@@ -35,6 +35,6 @@ roomsContainer.addEventListener('click', e=> {
 chat.getRooms(ui.loadRoomButtons);
 chat.addChat(user);
 chat.updateChat(ui.logChats);
-chat.addRoom();
-chat.deleteAndUpdateRooms();
+// chat.addRoom();
+// chat.deleteAndUpdateRooms();
 user.changeUsername();

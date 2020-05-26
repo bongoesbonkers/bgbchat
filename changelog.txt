@@ -5,3 +5,5 @@ Added active class for chat.
 Chat window:-
 Messages now display the relative time from message sent. 
 
+Add/Remove Chat rooms:
+Removed functionality until authentication and proper User class is developed.
