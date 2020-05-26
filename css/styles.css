@@ -8,13 +8,15 @@ body {
     max-width: 400px;
 }
 
+.chat__room-buttons {
+    width: 100%;
+}
+
 .chat__room-buttons span {
     font-weight: bold;
     color: yellow;
     padding-left: 3px;
-    /* position: relative;
-    top: -12px;
-    right: -7px; */
+
 }
 
 .chat__room-buttons span:active {
@@ -30,7 +32,7 @@ body {
 .chat__room-buttons .active {
     background-color: #001c39 !important;
     box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-    border: tomato;
+    border: #001c39 !important;
 }
 
 .chat__room-buttons .active:hover {
