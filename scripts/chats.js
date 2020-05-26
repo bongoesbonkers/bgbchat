@@ -88,7 +88,7 @@ class Chat {
 
 
     async updateChat(callback) {
-        await this.chatsDB.onSnapshot(snapshot => {
+        await this.chatsDB.orderBy("time").onSnapshot(snapshot => {
             // console.log(snapshot.docChanges());
             snapshot.docChanges().forEach( change => {
                 if(change.type === "added") {
