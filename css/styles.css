@@ -78,3 +78,7 @@ text-align: right !important;
     background-color: #003f84;
     border-color: #003f84;
 }
+
+.chat__form {
+    margin-bottom: 1.5rem;   
+}
