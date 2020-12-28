@@ -2,6 +2,7 @@ body {
     font-family:  'Dosis', Helvetica, Lato, Montserrat, sans-serif;
     font-size: 18px;
     letter-spacing: 1px;
+    padding: 2rem 0;
 }
 
 .container {
@@ -79,6 +80,4 @@ text-align: right !important;
     border-color: #003f84;
 }
 
-.chat__form {
-    margin-bottom: 1.5rem;   
-}
+
